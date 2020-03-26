@@ -46,3 +46,9 @@
     width: 100vw;
     background-color: beige;
 }
+
+#sideMenu {
+    height: 100vh;
+    width: 25vw;
+    background-color: silver;
+}

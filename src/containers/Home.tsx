@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import { HomeState } from './models/state';
 
-type MyState = {
-    sideMenuOpen: boolean;
-};
+import SideMenu from '../components/SideMenu';
+
 class Home extends Component {
-    state: MyState = {
+    state: HomeState = {
         sideMenuOpen: true,
     };
     render() {
-        if (this.state.sideMenuOpen) {
-            console.log('Side menu open');
-        }
-        return <div id="home"></div>;
+        const { sideMenuOpen } = this.state;
+        const menuView = sideMenuOpen ? <SideMenu /> : null;
+
+        return <div id="home">{menuView}</div>;
     }
 }
 
