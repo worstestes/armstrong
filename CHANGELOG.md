@@ -11,6 +11,11 @@
 -   CHANGELOG.md
 -   FilePreview component for quick snapshot view into STL file
 -   basic starter styling for SideMenu component
+-   public folder to .gitignore
+
+### Removed
+
+-   public folder
 
 ## [0.0.1] - 2020-02-26
 
