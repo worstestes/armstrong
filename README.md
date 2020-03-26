@@ -1,4 +1,4 @@
-### Armstrong
+## Armstrong
 
 Basic STL file interface and utility built with Typescript + React
 
