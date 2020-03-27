@@ -34,8 +34,8 @@
 }
 
 .file-preview {
-    width: 90%;
-    height: 100px;
+    width: 175px;
+    height: 125px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,20 +47,29 @@
     background-color: #faf0f0;
 }
 
+.file-preview :hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.4);
+}
+
 .upload-container {
     width: 50%;
-    min-height: 400px;
+    min-height: 500px;
     float: left;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    background-color: rgba(0, 0, 0, 0.1);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    background-color: #eaeaea;
 }
 
 #file-input-label {
     display: flex;
+    flex: 1;
+    width: '100%';
     flex-direction: column;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-left: 20px;
+    /* background-color: red; */
 }
 
 .viewer-canvas {
@@ -73,6 +82,17 @@
 
 input {
     min-width: 60%;
+}
+
+.close-button {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.close-button:active,
+.close-button:hover {
+    transform: scale(1.2);
 }
 
 .stl-view {
