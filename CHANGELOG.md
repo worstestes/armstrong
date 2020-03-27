@@ -1,3 +1,18 @@
+## [0.0.3] - 2020-02-27
+
+### Updated
+
+-   Models files (still much more work to do on types)
+
+### Added
+
+-   FilePreviewList component for default options feature (in progress)
+-   FileViewer component to view model canvas
+
+### Removed
+
+-   A lot of boilerplate from CRA (test, logo, assets, serviceworker, etc.)
+
 ## [0.0.2] - 2020-02-26
 
 ### Updated

@@ -5,3 +5,9 @@ export interface MainTextComponent {
     children: React.ReactNode;
     style?: Object;
 }
+
+export interface FileList {
+    onClick?: () => {};
+    children: React.ReactNode;
+    style?: Object;
+}

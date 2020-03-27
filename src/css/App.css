@@ -1,0 +1,81 @@
+.App {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: beige; */
+}
+
+#sideMenu {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 18%;
+    background-color: rgba(16, 26, 32, 0.3);
+    padding: 20px;
+}
+
+.file-preview-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.file-preview {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    background-color: #faf0f0;
+}
+
+.upload-container {
+    width: 50%;
+    min-height: 400px;
+    float: left;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#file-input-label {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.viewer-canvas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+input {
+    min-width: 60%;
+}
+
+.stl-view {
+    display: flex;
+    flex: 1;
+}
