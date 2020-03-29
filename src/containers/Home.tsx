@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import { HomeState } from './models/state';
 
 import SideMenu from '../components/SideMenu';
@@ -10,30 +9,49 @@ import { fetchLocalModels } from '../helpers/';
 class Home extends Component {
     state: HomeState = {
         sideMenuOpen: true,
-        blobs: [],
-        selectedBlob: null,
+        files: [],
+        selectedFile: null,
+        modalOpen: false,
     };
 
     async componentDidMount() {
-        const blobs = (await fetchLocalModels()) || [];
+        const files = (await fetchLocalModels()) || [];
         this.setState({
-            blobs,
+            files,
         });
     }
     selectFile = (file: File) => {
         this.setState({
-            selectedBlob: file,
+            selectedFile: file,
+            modalOpen: true,
+        });
+    };
+
+    closeModal = () => {
+        this.setState({
+            selectedFile: null,
+            modalOpen: false,
         });
     };
 
     render() {
-        const { sideMenuOpen, selectedBlob } = this.state;
-        const menuView = sideMenuOpen ? <SideMenu onClick={this.selectFile} files={this.state.blobs} /> : null;
+        const { sideMenuOpen, selectedFile, modalOpen } = this.state;
+        const menuView = sideMenuOpen ? <SideMenu onClick={this.selectFile} files={this.state.files} /> : null;
 
         return (
             <div id="home">
                 {menuView}
-                <FileViewer selectedBlob={selectedBlob} />
+                <FileViewer
+                    selectedFile={selectedFile}
+                    selectFile={(file: File) => {
+                        this.setState({
+                            selectedFile: null,
+                        });
+                        this.selectFile(file);
+                    }}
+                    modalOpen={modalOpen}
+                    closeModal={this.closeModal}
+                />
             </div>
         );
     }

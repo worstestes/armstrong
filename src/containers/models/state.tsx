@@ -1,5 +1,6 @@
 export interface HomeState {
     sideMenuOpen: boolean;
-    blobs: [] | Blob[];
-    selectedBlob: Blob | null;
+    files: [] | Blob[];
+    selectedFile: Blob | null;
+    modalOpen: boolean;
 }

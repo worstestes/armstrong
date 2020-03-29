@@ -12,16 +12,18 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    /* background-color: beige; */
 }
 
-#sideMenu {
+#side-menu {
     position: absolute;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: 18%;
-    background-color: rgba(16, 26, 32, 0.3);
     padding: 20px;
+    /* background-color: rgba(44, 72, 117, 0.4); */
+    background-image: linear-gradient(45deg, #93a5cfd5 0%, #e4efe9d7 100%);
+
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 .file-preview-list {
@@ -35,7 +37,7 @@
 
 .file-preview {
     width: 175px;
-    height: 125px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,7 +55,7 @@
 }
 
 .upload-container {
-    width: 50%;
+    width: 600px;
     min-height: 500px;
     float: left;
     border-radius: 3px;
@@ -98,4 +100,16 @@ input {
 .stl-view {
     display: flex;
     flex: 1;
+}
+
+.fileContainer {
+    max-width: 150px;
+    background: coral;
+    border-radius: 0.5em;
+    float: left;
+    padding: 1em;
+}
+
+.fileContainer [type='file'] {
+    cursor: pointer;
 }

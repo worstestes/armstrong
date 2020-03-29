@@ -5,7 +5,7 @@ import { SideMenuComponent } from './models';
 const SideMenu: React.FC<SideMenuComponent> = ({ files, onClick, style }) => {
     console.log(files);
     return (
-        <div id="sideMenu" style={style}>
+        <div id="side-menu" style={style}>
             <FilePreviewList onClick={onClick} files={files} />
         </div>
     );
