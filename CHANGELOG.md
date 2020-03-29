@@ -1,4 +1,24 @@
-## [0.0.3] - 2020-02-27
+## [0.3.0] - 2020-03-28
+
+### Updated
+
+-   Side menu (and children file preview components) CSS styling + dimensions
+
+### Added
+
+-   Model file viewer modal + color picking component
+-   Color picker component
+-   Space theme focus with animated background + space theme STL models based off of original idea of "moon.stl" file
+
+## [0.2.0] - 2020-03-28
+
+### Added
+
+-   Local STL file selection with express server
+-   Placeholder images for default models
+-   Consolidation of typescript model folders for components
+
+## [0.1.0] - 2020-03-27
 
 ### Updated
 
@@ -13,7 +33,7 @@
 
 -   A lot of boilerplate from CRA (test, logo, assets, serviceworker, etc.)
 
-## [0.0.2] - 2020-02-26
+## [0.0.2] - 2020-03-26
 
 ### Updated
 
@@ -32,7 +52,7 @@
 
 -   public folder
 
-## [0.0.1] - 2020-02-26
+## [0.0.1] - 2020-03-26
 
 ### Added
 

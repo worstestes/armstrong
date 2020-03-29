@@ -9,17 +9,18 @@ const FilePreviewList: React.FC<FileDocumentList> = ({ files, onClick }) => (
         {files.map((file: any, i: number) => (
             <FilePreview key={i} file={file} fileName={modelIDs[i]} onClick={onClick} />
         ))}
-        <div>
-            {/* <label className="fileContainer">
-                Upload STL file
+        <div className="upload-container" style={{ padding: 3 }}>
+            <label className="upload-label">
+                Or upload your own STL file
                 <input
+                    className="upload-input"
                     type="file"
                     name="obj-file"
                     onChange={(e: any) => {
                         return onClick(e.target.files[0]);
                     }}
                 />
-            </label> */}
+            </label>
         </div>
     </div>
 );

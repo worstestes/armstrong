@@ -1,9 +1,10 @@
 .App {
     display: flex;
     flex: 1;
-    height: 100vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #home {
@@ -14,16 +15,72 @@
     width: 100vw;
 }
 
+.space {
+    background: rgba(128, 0, 128, 0.1) center / 200px 200px round;
+    /* border: 1px dashed purple; */
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.stars1 {
+    animation: space 180s ease-in-out infinite;
+    background-image: radial-gradient(1px 1px at 25px 5px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 50px 25px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 125px 20px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 50px 75px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 15px 125px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2.5px 2.5px at 110px 80px, white, rgba(255, 255, 255, 0));
+}
+.stars2 {
+    animation: space 240s ease-in-out infinite;
+    background-image: radial-gradient(1px 1px at 75px 125px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 100px 75px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 199px 100px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 20px 50px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2.5px 2.5px at 100px 5px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2.5px 2.5px at 5px 5px, white, rgba(255, 255, 255, 0));
+}
+.stars3 {
+    animation: space 300s ease-in-out infinite;
+    background-image: radial-gradient(1px 1px at 10px 10px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 150px 150px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 60px 170px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 175px 180px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 195px 95px, white, rgba(255, 255, 255, 0)),
+        radial-gradient(2.5px 2.5px at 95px 145px, white, rgba(255, 255, 255, 0));
+}
+
 #side-menu {
     position: absolute;
     left: 0;
     height: 100%;
     width: 18%;
     padding: 20px;
-    /* background-color: rgba(44, 72, 117, 0.4); */
-    background-image: linear-gradient(45deg, #93a5cfd5 0%, #e4efe9d7 100%);
+    /* background-image: linear-gradient(45deg, #93a5cfd5 0%, #e4efe9d7 100%); */
+    /* background: radial-gradient(circle at bottom, rgba(0, 0, 128, 0.479) 100%, black 100%); */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-color: rgba(0, 0, 0, 0.75);
 
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+@keyframes space {
+    40% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    60% {
+        opacity: 0.75;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .file-preview-list {
@@ -54,7 +111,7 @@
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.4);
 }
 
-.upload-container {
+.modal-container {
     width: 600px;
     min-height: 500px;
     float: left;
@@ -102,14 +159,35 @@ input {
     flex: 1;
 }
 
-.fileContainer {
-    max-width: 150px;
-    background: coral;
-    border-radius: 0.5em;
-    float: left;
-    padding: 1em;
+.upload-container {
+    width: 175px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    background-color: #faf0f0;
 }
 
-.fileContainer [type='file'] {
+.upload-label {
+    width: 100%;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 0.5em;
+    float: left;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.upload-input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.upload-input [type='file'] {
     cursor: pointer;
 }

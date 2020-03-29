@@ -5,21 +5,12 @@ body {
         'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    background: #414a4c;
-    background: linear-gradient(to bottom, #414a4c 0%, #323b3d 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #414a4c), color-stop(100%, #323b3d));
-    background: -webkit-linear-gradient(top, #414a4c 0%, #323b3d 100%);
-    background: -moz-linear-gradient(top, #414a4c 0%, #323b3d 100%);
-    background: -o-linear-gradient(top, #414a4c 0%, #323b3d 100%);
-    background: -ms-linear-gradient(top, #414a4c 0%, #323b3d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#414A4C', endColorstr='#323B3D', GradientType=0);
-    border: 1px solid #232c2e;
-    box-shadow: inset 0 1px 0 #50595b;
-    -webkit-box-shadow: inset 0 1px 0 #50595b;
-    -moz-box-shadow: inset 0 1px 0 #50595b;
+    background: radial-gradient(circle at bottom, navy 0, black 100%);
+    height: 100vh;
+    overflow: hidden;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    overflow: hidden;
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const modelIDs = ['astronaut', 'lander', 'moon', 'rocket', 'rover', 'satellite']; // temporary references to STL file names
+export const modelIDs = ['moon', 'lander', 'astronaut', 'rocket', 'rover', 'satellite']; // temporary references to STL file names
 
 export const fetchLocalModels = async (): Promise<Blob[]> => {
     try {

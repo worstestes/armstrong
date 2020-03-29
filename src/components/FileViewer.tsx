@@ -5,9 +5,10 @@ import { ChromePicker } from 'react-color';
 
 class FileViewer extends Component<any> {
     state = {
-        testColor: 'white',
+        modelColor: 'white',
     };
     render() {
+        const { modelColor } = this.state;
         const { selectedFile, modalOpen, closeModal } = this.props;
         const customStyles = {
             content: {
@@ -21,15 +22,9 @@ class FileViewer extends Component<any> {
         };
 
         return (
-            <Modal
-                isOpen={modalOpen}
-                // onAfterOpen={afterOpenModal}
-                // onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="STL file viewer modal"
-            >
-                <div className="upload-container">
-                    <div className="input-container">
+            <Modal isOpen={modalOpen} style={customStyles} contentLabel="STL file viewer modal">
+                <div className="modal-container">
+                    <div className="modal-header">
                         <div
                             style={{
                                 display: 'flex',
@@ -47,14 +42,12 @@ class FileViewer extends Component<any> {
                         </div>
                     </div>
                     <ChromePicker
-                        color={this.state.testColor}
-                        onChange={(color: any) => this.setState({ testColor: color.hex })}
-                        onChangeComplete={(color: any) => this.setState({ testColor: color.hex })}
+                        color={modelColor}
+                        onChange={(color: any) => this.setState({ modelColor: color.hex })}
+                        onChangeComplete={(color: any) => this.setState({ modelColor: color.hex })}
                     />
                     <div className="viewer-canvas">
-                        {selectedFile ? (
-                            <STLViewer file={selectedFile} width={500} modelColor={this.state.testColor} />
-                        ) : null}
+                        {selectedFile ? <STLViewer file={selectedFile} width={500} modelColor={modelColor} /> : null}
                     </div>
                 </div>
             </Modal>
