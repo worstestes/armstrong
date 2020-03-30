@@ -1,3 +1,14 @@
+## [1.0.0] - 2020-03-29
+
+### Updated
+
+-   Full review and refactor of code, removal of redundancies, renaming conventions + styling touch-ups
+
+### Added
+
+-   Metrics viewer modal for detailed dimensions and measurements of currently viewed model file
+-   Basic documentation labeling for components and functions for quick reference in dev environment
+
 ## [0.3.0] - 2020-03-28
 
 ### Updated

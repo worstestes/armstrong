@@ -17,7 +17,6 @@
 
 .space {
     background: rgba(128, 0, 128, 0.1) center / 200px 200px round;
-    /* border: 1px dashed purple; */
     bottom: 0;
     left: 0;
     position: absolute;
@@ -59,11 +58,7 @@
     height: 100%;
     width: 18%;
     padding: 20px;
-    /* background-image: linear-gradient(45deg, #93a5cfd5 0%, #e4efe9d7 100%); */
-    /* background: radial-gradient(circle at bottom, rgba(0, 0, 128, 0.479) 100%, black 100%); */
-    /* background-color: rgba(255, 255, 255, 0.1); */
     background-color: rgba(0, 0, 0, 0.75);
-
     box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -117,8 +112,15 @@
     float: left;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    /* background-color: rgba(0, 0, 0, 0.1); */
     background-color: #eaeaea;
+}
+
+.modal-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
 }
 
 #file-input-label {
@@ -126,9 +128,7 @@
     flex: 1;
     width: '100%';
     flex-direction: column;
-    /* padding-top: 10px; */
     padding-left: 20px;
-    /* background-color: red; */
 }
 
 .viewer-canvas {
@@ -171,6 +171,7 @@ input {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     margin-bottom: 15px;
     background-color: #faf0f0;
+    padding: 3px;
 }
 
 .upload-label {
@@ -190,4 +191,47 @@ input {
 
 .upload-input [type='file'] {
     cursor: pointer;
+}
+
+.modal-title {
+    color: rgba(82, 3, 146, 0.9);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.metrics-modal {
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 600px;
+    border-radius: 5px;
+    background-color: white;
+    right: 50px;
+    padding: 20px;
+}
+
+.metric-detail-container {
+    background-color: #eaeaea;
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.metrics-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.07;
+    line-height: 1;
+    color: rgba(82, 3, 146, 0.9);
+}
+
+.metrics {
+    color: #00020e;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.07;
+    line-height: 2;
 }

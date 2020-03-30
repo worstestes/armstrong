@@ -3,7 +3,12 @@ import { STLViewer } from 'react-stl-obj-viewer';
 import Modal from 'react-modal';
 import { ChromePicker } from 'react-color';
 
-class FileViewer extends Component<any> {
+import { FileViewerComponent } from './models';
+
+/**
+ * 3D Model viewer modal for selected model file with custom color picking functionality
+ */
+class FileViewer extends Component<FileViewerComponent> {
     state = {
         modelColor: 'white',
     };
@@ -13,7 +18,7 @@ class FileViewer extends Component<any> {
         const customStyles = {
             content: {
                 top: '50%',
-                left: '50%',
+                left: '45%',
                 right: 'auto',
                 bottom: 'auto',
                 marginRight: '-50%',
@@ -25,21 +30,12 @@ class FileViewer extends Component<any> {
             <Modal isOpen={modalOpen} style={customStyles} contentLabel="STL file viewer modal">
                 <div className="modal-container">
                     <div className="modal-header">
-                        <div
-                            style={{
-                                display: 'flex',
-                                width: '100%',
-                                justifyContent: 'flex-end',
-                                paddingTop: 10,
-                            }}
-                        >
-                            <img
-                                onClick={() => closeModal()}
-                                className="close-button"
-                                src={require('../assets/images/close.png')}
-                                alt="close"
-                            />
-                        </div>
+                        <img
+                            onClick={() => closeModal()}
+                            className="close-button"
+                            src={require('../assets/images/close.png')}
+                            alt="close"
+                        />
                     </div>
                     <ChromePicker
                         color={modelColor}
