@@ -1,18 +1,14 @@
 ## Armstrong
 
-Basic STL file interface and utility built with Typescript + React
+Basic STL file interface and utility built with Typescript + React. See local STL files in the model viewer, or upload your own. Metrics data is generated for local files, with an update coming soon for metrics generation for uploaded files.
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
 
 ```
 npm install
 ```
 
-### `Running`
+### Running
 
 ```
 npm run start
