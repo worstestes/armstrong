@@ -39,10 +39,7 @@ class Home extends Component {
     render() {
         const { sideMenuOpen, fileMetrics, selectedFile, selectedFileId, modalOpen } = this.state;
         const menuView = sideMenuOpen ? React.createElement(SideMenu, { onClick: this.selectFile, files: this.state.files }) : null;
-        console.log(fileMetrics);
-        console.log(selectedFileId);
-        console.log(fileMetrics[selectedFileId]);
-        const metricsModalView = modalOpen && fileMetrics[selectedFileId] ? (React.createElement(MetricsViewer, { selectedFileMetrics: fileMetrics[selectedFileId] })) : null;
+        const metricsModalView = modalOpen && fileMetrics[selectedFileId] ? (React.createElement(MetricsViewer, { selectedFileId: selectedFileId, selectedFileMetrics: fileMetrics[selectedFileId] })) : null;
         return (React.createElement("div", { id: "home" },
             modalOpen ? null : menuView,
             React.createElement(FileViewer, { selectedFile: selectedFile, modalOpen: modalOpen, closeModal: this.closeModal }),

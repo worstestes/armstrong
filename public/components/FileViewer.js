@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { STLViewer } from 'react-stl-obj-viewer';
 import Modal from 'react-modal';
 import { ChromePicker } from 'react-color';
+/**
+ * 3D Model viewer modal for selected model file with custom color picking functionality
+ */
 class FileViewer extends Component {
     constructor() {
         super(...arguments);
@@ -25,13 +28,7 @@ class FileViewer extends Component {
         return (React.createElement(Modal, { isOpen: modalOpen, style: customStyles, contentLabel: "STL file viewer modal" },
             React.createElement("div", { className: "modal-container" },
                 React.createElement("div", { className: "modal-header" },
-                    React.createElement("div", { style: {
-                            display: 'flex',
-                            width: '100%',
-                            justifyContent: 'flex-end',
-                            paddingTop: 10,
-                        } },
-                        React.createElement("img", { onClick: () => closeModal(), className: "close-button", src: require('../assets/images/close.png'), alt: "close" }))),
+                    React.createElement("img", { onClick: () => closeModal(), className: "close-button", src: require('../assets/images/close.png'), alt: "close" })),
                 React.createElement(ChromePicker, { color: modelColor, onChange: (color) => this.setState({ modelColor: color.hex }), onChangeComplete: (color) => this.setState({ modelColor: color.hex }) }),
                 React.createElement("div", { className: "viewer-canvas" }, selectedFile ? React.createElement(STLViewer, { file: selectedFile, width: 500, modelColor: modelColor }) : null))));
     }

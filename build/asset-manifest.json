@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.72aeffbe.chunk.css",
+    "main.js": "/static/js/main.3bae510f.chunk.js",
+    "main.js.map": "/static/js/main.3bae510f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.659188a0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.659188a0.js.map",
+    "static/js/2.d99dab28.chunk.js": "/static/js/2.d99dab28.chunk.js",
+    "static/js/2.d99dab28.chunk.js.map": "/static/js/2.d99dab28.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c69451df7f260d0cd08925dec89a1902.js": "/precache-manifest.c69451df7f260d0cd08925dec89a1902.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.72aeffbe.chunk.css.map": "/static/css/main.72aeffbe.chunk.css.map",
+    "static/js/2.d99dab28.chunk.js.LICENSE.txt": "/static/js/2.d99dab28.chunk.js.LICENSE.txt",
+    "static/media/astronaut.png": "/static/media/astronaut.31f88233.png",
+    "static/media/lander.png": "/static/media/lander.67af9c2d.png",
+    "static/media/moon.png": "/static/media/moon.ac67553f.png",
+    "static/media/rocket.png": "/static/media/rocket.ed4197ae.png",
+    "static/media/rover.png": "/static/media/rover.348d1b1e.png",
+    "static/media/satellite.png": "/static/media/satellite.f1b9cb45.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.659188a0.js",
+    "static/js/2.d99dab28.chunk.js",
+    "static/css/main.72aeffbe.chunk.css",
+    "static/js/main.3bae510f.chunk.js"
+  ]
+}
