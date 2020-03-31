@@ -18,6 +18,7 @@ Due to the time constraints of the project as well as my own workload, there are
 * Support for reading and converting data from binary-based .stl files, as well as providing support for OBJ files.
 * A method to review potential calculation errors, I don't have a way (currently) to check my work and ensure the provided calculations are correct.
 * Limitations of the model viewer provide an awkward camera angle as well as shading issues. Using a package that utilizes three.js rather than creating my own limits me from having more customization in that regard.
+* There is more cleanup and file size optimization to be done. For example, due to the lack of support of binary stl files I've opted to use the ASCII equivalent, which is bulkier and takes more time to load. 
 
 ### Installing
 
@@ -30,6 +31,8 @@ npm install
 ```
 npm run start
 ```
+
+Note: Due to more work needed on the optimization front, give the front-end 10-20 seconds to load the provided models on the left side menu.
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
