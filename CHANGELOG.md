@@ -3,9 +3,11 @@
 ### Updated
 
 -   Full review and refactor of code, removal of redundancies, renaming conventions + styling touch-ups
+-   Basic server folder
 
 ### Added
 
+-   Parsing helper for parse operation of ASCII-based .stl files, to be used in conjunction (and for comparison) with node-stl package
 -   Metrics viewer modal for detailed dimensions and measurements of currently viewed model file
 -   Basic documentation labeling for components and functions for quick reference in dev environment
 

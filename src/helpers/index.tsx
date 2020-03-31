@@ -3,6 +3,21 @@ import axios from 'axios';
 export const modelIDs = ['moon', 'lander', 'astronaut', 'rocket', 'rover', 'satellite']; // temporary references to STL file names
 
 export const modelLabelAndUnits = {
+    numberOfFacets: {
+        id: 'numberOfFacets',
+        label: 'Number of Triangles',
+        unit: '(facets)', 
+    },
+    area: {
+        id: 'surfaceArea',
+        label: 'Area',
+        unit: 'm',
+    },
+    boundingBox: {
+        id: 'boundingBox',
+        label: 'Bounding Box (max)',
+        unit: 'mm',
+    },
     volume: {
         id: 'volume',
         label: 'Volume',
@@ -12,16 +27,6 @@ export const modelLabelAndUnits = {
         id: 'weight',
         label: 'Weight',
         unit: 'grams',
-    },
-    boundingBox: {
-        id: 'boundingBox',
-        label: 'Bounding Box',
-        unit: 'mm',
-    },
-    area: {
-        id: 'area',
-        label: 'Area',
-        unit: 'm',
     },
     centerOfMass: {
         id: 'centerOfMass',
@@ -62,6 +67,7 @@ export const fetchModelsMetrics = async (): Promise<{ [index: string]: number | 
                 }).then((res: any) => (indexedMetricsById[id] = res.data)),
             ),
         );
+        console.log(indexedMetricsById)
         return indexedMetricsById;
     } catch (error) {
         console.error(`Fetch model file failure: ${error}`);

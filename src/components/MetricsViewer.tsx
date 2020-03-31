@@ -10,7 +10,7 @@ const MetricsViewer: React.FC<MetricsModalContainer> = ({ selectedFileId, select
         <div className="metrics-modal">
             <MainText className="modal-title">{selectedFileId}.stl</MainText>
             {Object.keys(modelLabelAndUnits).map((key: any, i: number) => {
-                let measurement = Number.parseFloat(selectedFileMetrics[key]).toFixed(6);
+                let measurement = Number.parseFloat(selectedFileMetrics[key]).toFixed(key === 'numberOfFacets' ? 0 : 6);
                 let label = modelLabelAndUnits[key].label;
                 let unit = modelLabelAndUnits[key].unit;
 
