@@ -7,6 +7,8 @@ Basic STL file interface and utility built with Typescript + React. See local ST
 
 I decided to create a GUI interface in order to learn more about manipulating and displaying basic model files. With the time constraints given, I used various (but a minimal amount of) libraries to help with modal creation, color picking and extra metrics generation. By creating a full fledged GUI + express api, I could work with models on the front end as well as work with basic manipulation of the .stl files. This gave me a lot of time to research and learn about the files used in 3D modeling itself, as well as challenging me to think about 3D space.
 
+The name "armstrong" is just a funny theme I took from my initial model "moon.stl" file. I ended up creating a fun space theme and added more space-based stl model files.
+
 
 ### Potential improvements
 
