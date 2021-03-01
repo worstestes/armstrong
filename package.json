@@ -20,7 +20,7 @@
         "react-modal": "^3.11.2",
         "react-scripts": "3.4.1",
         "react-stl-obj-viewer": "^1.2.0",
-        "three": "^0.115.0",
+        "three": "^0.125.0",
         "typescript": "~3.7.2"
     },
     "proxy": "http://localhost:5000",
